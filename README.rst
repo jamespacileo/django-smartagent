@@ -35,86 +35,58 @@ django-smartagent adds the ``browser_data`` dictionary to the ``request`` object
 
 Features available within the ``browser_Data`` dictionary
 
-browser:
-    Browser's name
-
-majorver:
-    Major version
-
-minorver:
-    Minor version
-
-cookies:
-    If cookies are supported
-
-activexcontrols:
-    If activexcontrols are supported
-
-cdf:
-    If Channel Definition Format is supported
-
-supportscss:
-    If CSS is supported
-
-cssversion:
-    Max CSS version supported
-
-aolversion:
-    Version
-
-frames:
-   If frames are supported
-
-isbanned:
-    
-
-tables:
-    If tables are supported
-
-iframes:
-    ...
-
-vbscript:
-    If browser supports Visaul Basic scripting
-
-ismobiledevice:
-    If host machine is a mobile device
-
-platform:
-    Host platform of the user's browser
-
-version:
-    Host OS version
-
-aol:
-    ...
-
-javaapplets:
-    If browser supports Java Applets
-
-backgroundsounds:
-    If browser supports background sounds
-
-win64:
-    If the host OS is 64bit
-
-javascript:
-    If browser supports Javascript
-
-beta:
-    If browser is a beta distribution
-
-alpha:
-    If browser is an alpha distribution
-
-issyndicationreader:
-    If user agent is a syndacation reader
-
-win32:
-    If the host OS is 32bit
-
-crawler:
-    If user agent is a web crawler
-
-win16:
-    If the host OS is 16bit
++-----------------------+----------------------------------------------+
++  cdf                  +  If Channel Definition Format is supported   +
++-----------------------+----------------------------------------------+
++  activexcontrols      +  If activexcontrols are supported            +
++-----------------------+----------------------------------------------+
++  cookies              +  If cookies are supported                    +
++-----------------------+----------------------------------------------+
++  supportscss          +  If CSS is supported                         +
++-----------------------+----------------------------------------------+
++  aolversion           +  Version                                     +
++-----------------------+----------------------------------------------+
++  cssversion           +  Max CSS version supported                   +
++-----------------------+----------------------------------------------+
++  isbanned             +  ...                                         +
++-----------------------+----------------------------------------------+
++  majorver             +  Major version                               +
++-----------------------+----------------------------------------------+
++  tables               +  If tables are supported                     +
++-----------------------+----------------------------------------------+
++  iframes              +  ...                                         +
++-----------------------+----------------------------------------------+
++  vbscript             +  If browser supports Visaul Basic scripting  +
++-----------------------+----------------------------------------------+
++  platform             +  Host platform of the user's browser         +
++-----------------------+----------------------------------------------+
++  version              +  Host OS version                             +
++-----------------------+----------------------------------------------+
++  aol                  +  ...                                         +
++-----------------------+----------------------------------------------+
++  javaapplets          +  If browser supports Java Applets            +
++-----------------------+----------------------------------------------+
++  backgroundsounds     +  If browser supports background sounds       +
++-----------------------+----------------------------------------------+
++  win64                +  If the host OS is 64bit                     +
++-----------------------+----------------------------------------------+
++  javascript           +  If browser supports Javascript              +
++-----------------------+----------------------------------------------+
++  beta                 +  If browser is a beta distribution           +
++-----------------------+----------------------------------------------+
++  alpha                +  If browser is an alpha distribution         +
++-----------------------+----------------------------------------------+
++  minorver             +  Minor version                               +
++-----------------------+----------------------------------------------+
++  issyndicationreader  +  If user agent is a syndacation reader       +
++-----------------------+----------------------------------------------+
++  win32                +  If the host OS is 32bit                     +
++-----------------------+----------------------------------------------+
++  ismobiledevice       +  If host machine is a mobile device          +
++-----------------------+----------------------------------------------+
++  crawler              +  If user agent is a web crawler              +
++-----------------------+----------------------------------------------+
++  win16                +  If the host OS is 16bit                     +
++-----------------------+----------------------------------------------+
++  browser              +  Browser's name                              +
++-----------------------+----------------------------------------------+
