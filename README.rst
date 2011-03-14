@@ -47,7 +47,7 @@ Features available within the ``browser_Data`` dictionary
 :cookies:
     If cookies are supported
 
-:activexcontrols:
+:activexco:
     If activexcontrols are supported
 
 :cdf:
