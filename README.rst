@@ -62,7 +62,7 @@ cssversion:
 aolversion:
     Version
 
-:frames:
+frames:
    If frames are supported
 
 isbanned:
@@ -78,7 +78,7 @@ vbscript:
     If browser supports Visaul Basic scripting
 
 ismobiledevice:
-    If 
+    If host machine is a mobile device
 
 platform:
     Host platform of the user's browser
