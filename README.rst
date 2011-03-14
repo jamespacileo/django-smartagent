@@ -35,11 +35,8 @@ django-smartagent adds the ``browser_data`` dictionary to the ``request`` object
 
 Features available within the ``browser_Data`` dictionary
 
-:browser:
-    Browser's name
-
-:majorver:
-    Major version
+**browser**    Browser's name
+**majorver**   Major version
 
 :minorver:
     Minor version
@@ -47,7 +44,7 @@ Features available within the ``browser_Data`` dictionary
 :cookies:
     If cookies are supported
 
-:activexco:
+:activexcontrols:
     If activexcontrols are supported
 
 :cdf:
