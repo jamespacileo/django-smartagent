@@ -70,7 +70,7 @@ django-smartagent adds the ``browser_data`` dictionary to the ``request`` object
 +-----------------------+----------------------------------------------+
 +  tables               +  If tables are supported                     +
 +-----------------------+----------------------------------------------+
-+  iframes              +  If iframes are supported                  +
++  iframes              +  If iframes are supported                    +
 +-----------------------+----------------------------------------------+
 +  vbscript             +  If browser supports Visaul Basic scripting  +
 +-----------------------+----------------------------------------------+
