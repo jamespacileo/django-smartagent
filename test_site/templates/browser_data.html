@@ -1,0 +1,8 @@
+
+<h1>Browser data</h1>
+
+{{ request.is_mobile }}
+
+{% for key, value in browser_data.items %}
+    <span style="width:166px; display:inline-block;">{{ key }} =</span> <span style="font-weight:bold;">{{ value }}</span> <br>
+{% endfor %}
