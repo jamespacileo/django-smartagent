@@ -19,8 +19,8 @@ Installation
 
 To install the app add `django_smartagent` to `INSTALLED_APPS`
 
-    INSTALLED_APPS = (
-        ...
-        'django_smartagent',
-        ...
-    )
+>    INSTALLED_APPS = (
+>        ...
+>        'django_smartagent',
+>        ...
+>    )
