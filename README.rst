@@ -33,9 +33,9 @@ Usage
 
 django-smartagent adds the ``browser_data`` dictionary to the ``request`` object containing features associated with the user's browser.
 
-Features available within the ``browser_Data`` dictionary
-
 +-----------------------+----------------------------------------------+
++  Fields exposed within ``browser_data``                              +
++=======================+==============================================+
 +  FIELD NAME           +  FIELD DESCRIPTION                           +
 +=======================+==============================================+
 +  cdf                  +  If Channel Definition Format is supported   +
