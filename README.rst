@@ -2,7 +2,6 @@
 Django-SmartAgent
 ======
 
-django-smartagent is an attempt to provide Django developers with a lightning fast and complete browser detection utility.
 
 :Author:
     James Pacileo
@@ -10,3 +9,11 @@ django-smartagent is an attempt to provide Django developers with a lightning fa
 :Version:
     0.1.0
 
+:Description:
+    django-smartagent is an attempt to provide Django developers with a lightning fast and complete browser detection utility.
+
+
+Installation
+------
+
+....
