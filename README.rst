@@ -65,7 +65,6 @@ django-smartagent adds the ``browser_data`` dictionary to the ``request`` object
 +-----------------------+----------------------------------------------+
 +  cssversion           +  Max CSS version supported                   +
 +-----------------------+----------------------------------------------+
-+-----------------------+----------------------------------------------+
 +  majorver             +  Major version                               +
 +-----------------------+----------------------------------------------+
 +  tables               +  If tables are supported                     +
@@ -77,7 +76,6 @@ django-smartagent adds the ``browser_data`` dictionary to the ``request`` object
 +  platform             +  Host platform of the user's browser         +
 +-----------------------+----------------------------------------------+
 +  version              +  Host OS version                             +
-+-----------------------+----------------------------------------------+
 +-----------------------+----------------------------------------------+
 +  javaapplets          +  If browser supports Java Applets            +
 +-----------------------+----------------------------------------------+
