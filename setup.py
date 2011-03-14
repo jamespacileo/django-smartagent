@@ -25,6 +25,7 @@ setup(
         'Programming Language :: Python',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
+    packages = ['django_smartagent'],
     #packages = find_packages(exclude=['ez_setup', 'test_project']),
     include_package_data = True,
     zip_safe = False,
