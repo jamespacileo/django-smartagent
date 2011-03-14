@@ -5,7 +5,23 @@ import time
 import re
 import os
 
+from django.conf import settings
+
+SMART_AGENT_SETTINGS = {
+    'AGENT_DATASET_LOCATION': 'agents.pk',
+}
+
+if hasattr(settings, 'SMART_AGENT_SETTINGS'):
+    SMART_AGENT_SETTINGS.update(settings.SMART_AGENT_SETTINGS)
+
 agents = []
+
+agents = pickle.load(open(SMART_AGENT_SETTINGS['AGENT_DATASET_LOCATION'], 'rb'))
+
+#try:
+#    agents = pickle.load(open('useragent_detector/agents.pk', 'rb'))
+#except IOError:
+#    pythonize_browscap(write_to_file='agents.pk')
 
 def get_user_agent_characteristics(agent):
     """
