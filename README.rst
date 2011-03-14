@@ -27,6 +27,23 @@ To install the app add ``django_smartagent`` to ``INSTALLED_APPS``
         ...
     )
 
+Place ``agents.pk`` within the root of the project directory 
+
+or alternatively set the AGENT_DATASET_LOCATION setting to the desired path for the agent data file.
+
+
+Settings
+------
+
+A settings variable can be added to your project settings.
+
+The structure is the following:
+
+::
+
+    SMART_AGENT_SETTINGS = {
+        'AGENT_DATASET_LOCATION': 'agents.pk',
+    }
 
 Usage
 ------
