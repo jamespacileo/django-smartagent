@@ -1,7 +1,8 @@
 ======
 Django-SmartAgent
 ======
-
+Description
+------
 
 :Author:
     James Pacileo
@@ -16,4 +17,10 @@ Django-SmartAgent
 Installation
 ------
 
-....
+To install the app add `django_smartagent` to `INSTALLED_APPS`
+
+    INSTALLED_APPS = (
+        ...
+        'django_smartagent',
+        ...
+    )
