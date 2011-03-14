@@ -36,7 +36,7 @@ django-smartagent adds the ``browser_data`` dictionary to the ``request`` object
 Features available within the ``browser_Data`` dictionary
 
 +-----------------------+----------------------------------------------+
-+  cdf                  +  If Channel Definition Format is supported   +
++  **cdf**                  +  If Channel Definition Format is supported   +
 +-----------------------+----------------------------------------------+
 +  activexcontrols      +  If activexcontrols are supported            +
 +-----------------------+----------------------------------------------+
