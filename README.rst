@@ -9,3 +9,4 @@ django-smartagent is an attempt to provide Django developers with a lightning fa
 
 :Version:
     0.1.0
+
