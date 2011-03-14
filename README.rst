@@ -17,9 +17,10 @@ Description
 Installation
 ------
 
-To install the app add `django_smartagent` to `INSTALLED_APPS`
+To install the app add ``django_smartagent`` to ``INSTALLED_APPS``
 
 ::
+
     INSTALLED_APPS = (
         ...
         'django_smartagent',
