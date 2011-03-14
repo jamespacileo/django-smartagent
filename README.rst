@@ -13,6 +13,8 @@ Description
 :Description:
     django-smartagent is an attempt to provide Django developers with a lightning fast and complete browser detection utility.
 
+:Requirements:
+    Django 1.2+
 
 Installation
 ------
