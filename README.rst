@@ -1,1 +1,5 @@
+======
+Django-SmartAgent
+======
+
 django-smartagent is the fastest and most complete user agent parser
