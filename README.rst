@@ -35,83 +35,86 @@ django-smartagent adds the ``browser_data`` dictionary to the ``request`` object
 
 Features available within the ``browser_Data`` dictionary
 
-**browser**    Browser's name
-**majorver**   Major version
+browser:
+    Browser's name
 
-:minorver:
+majorver:
+    Major version
+
+minorver:
     Minor version
 
-:cookies:
+cookies:
     If cookies are supported
 
-:activexcontrols:
+activexcontrols:
     If activexcontrols are supported
 
-:cdf:
+cdf:
     If Channel Definition Format is supported
 
-:supportscss:
+supportscss:
     If CSS is supported
 
-:cssversion:
+cssversion:
     Max CSS version supported
 
-:aolversion:
+aolversion:
     Version
 
 :frames:
-    If frames are supported
+   If frames are supported
 
-:isbanned:
+isbanned:
     
 
-:tables:
+tables:
     If tables are supported
 
-:iframes:
+iframes:
     ...
 
-:vbscript:
+vbscript:
     If browser supports Visaul Basic scripting
 
-:ismobiledevice:
+ismobiledevice:
     If 
 
-:platform:
+platform:
     Host platform of the user's browser
 
-:version:
+version:
     Host OS version
 
-:aol:
+aol:
     ...
 
-:javaapplets:
+javaapplets:
     If browser supports Java Applets
 
-:backgroundsounds:
+backgroundsounds:
     If browser supports background sounds
 
-:win64:
+win64:
     If the host OS is 64bit
 
-:javascript:
+javascript:
     If browser supports Javascript
 
-:beta:
+beta:
     If browser is a beta distribution
 
-:alpha:
+alpha:
     If browser is an alpha distribution
 
-:issyndicationreader:
+issyndicationreader:
     If user agent is a syndacation reader
 
-:win32:
+win32:
     If the host OS is 32bit
 
-:crawler:
+crawler:
     If user agent is a web crawler
 
-:win16:
+win16:
     If the host OS is 16bit
