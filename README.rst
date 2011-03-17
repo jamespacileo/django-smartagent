@@ -33,6 +33,13 @@ Place ``agents.pk`` within the root of the project directory
 
 or alternatively set the AGENT_DATASET_LOCATION setting to the desired path for the agent data file.
 
+Finally add 
+
+::
+
+    urlpatterns = patterns('',
+        ...
+        (r'^smartagent/', include('django_smartagent.urls')))
 
 Settings
 ------
