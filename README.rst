@@ -32,6 +32,7 @@ To install the app add ``django_smartagent`` to ``INSTALLED_APPS``
 Add the middleware
 
 ::
+
     MIDDLEWARE_CLASSES = (
         ...
         'django_smartagent.middleware.UserAgentDetectorMiddleware',
