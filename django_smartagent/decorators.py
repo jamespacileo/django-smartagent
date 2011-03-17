@@ -1,4 +1,7 @@
+from functools import wraps
 
+from django.shortcuts import render_to_response
+from django.http import HttpResponse
 
 def render_to(template=None, mobile_template=None, mimetype=None):
     """
