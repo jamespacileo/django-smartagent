@@ -29,6 +29,15 @@ To install the app add ``django_smartagent`` to ``INSTALLED_APPS``
         ...
     )
 
+Add the middleware
+
+::
+    MIDDLEWARE_CLASSES = (
+        ...
+        'django_smartagent.middleware.UserAgentDetectorMiddleware',
+    )
+    
+
 Place ``agents.pk`` within the root of the project directory 
 
 or alternatively set the AGENT_DATASET_LOCATION setting to the desired path for the agent data file.
