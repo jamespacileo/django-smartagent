@@ -6,6 +6,10 @@ import re
 import os
 
 from django.conf import settings
+from django.core.cache import cache
+
+CACHE_KEY = 'agents.pk'
+CACHE_TIME = 60*60*24  # daily
 
 SMART_AGENT_SETTINGS = {
     'AGENT_DATASET_LOCATION': 'agents.pk',
@@ -14,9 +18,10 @@ SMART_AGENT_SETTINGS = {
 if hasattr(settings, 'SMART_AGENT_SETTINGS'):
     SMART_AGENT_SETTINGS.update(settings.SMART_AGENT_SETTINGS)
 
-agents = []
-
-agents = pickle.load(open(SMART_AGENT_SETTINGS['AGENT_DATASET_LOCATION'], 'rb'))
+agents = cache.get(CACHE_KEY, [])
+if not agents:
+    agents = pickle.load(open(SMART_AGENT_SETTINGS['AGENT_DATASET_LOCATION'], 'rb'))
+    cache.set(CACHE_KEY, agents, CACHE_TIME)
 
 #try:
 #    agents = pickle.load(open('useragent_detector/agents.pk', 'rb'))
