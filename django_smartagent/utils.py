@@ -16,11 +16,11 @@ SMART_AGENT_SETTINGS = {
 if hasattr(settings, 'SMART_AGENT_SETTINGS'):
     SMART_AGENT_SETTINGS.update(settings.SMART_AGENT_SETTINGS)
 
-AGENT_DATASET_LOCATION = getattr(SMART_AGENT_SETTINGS, 'AGENT_DATASET_LOCATION', 'agents_basic.pkl')
+AGENT_DATASET_LOCATION = SMART_AGENT_SETTINGS['AGENT_DATASET_LOCATION']
 
 try:
     agents = pickle.load(open(AGENT_DATASET_LOCATION, 'rb'))
-except IOError:
+except TypeError:
     raise Warning("User-Agent dataset cannot be found! Make sure that AGENT_DATASET_LOCATION is set.")
     agents = []
 
