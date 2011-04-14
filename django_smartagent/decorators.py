@@ -25,7 +25,7 @@ def render_to(template=None, mobile_template=None, mimetype=None):
             output = function(request, *args, **kwargs)
             if not isinstance(output, dict):
                 return output
-            if request.browser_data.get('ismobiledevice') and not request.session.get('force_desktop_version'):
+            if request.browser_info.get('ismobiledevice') and not request.session.get('force_desktop_version'):
                 template = mobile_template
             tmpl = output.pop('TEMPLATE', template)
             return render_to_response(tmpl, output, \

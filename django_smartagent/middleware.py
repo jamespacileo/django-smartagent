@@ -21,4 +21,4 @@ class UserAgentDetectorMiddleware(object):
         for key in keys:
             if key not in NEEDED_VALUES:
                 user_agent.pop(key)
-        request.browser_data = user_agent
+        request.browser_info = user_agent
