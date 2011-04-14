@@ -74,6 +74,8 @@ A **render_to** decorator (based on django-annoying's render_to) renders a page 
 
 which is the equivalent of:
 
+::
+
     def page(request):
 
         articles = Articles.objects.all()[:30]
