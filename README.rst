@@ -60,9 +60,7 @@ Utilities for mobile sites
 
 As it is popular for sites to have a mobile version, there are a few utility methods within the project.
 
-A **render_to** decorator
-
-Based on django-annoying's render_to, renders a page using a desktop or mobile version of a site, depending if the user-agent is a mobile device or not.
+A **render_to** decorator (based on django-annoying's render_to) renders a page using a desktop or mobile version of a site, depending if the user-agent is a mobile device or not.
 
 ::
 
@@ -74,6 +72,21 @@ Based on django-annoying's render_to, renders a page using a desktop or mobile v
         return {
             'articles': articles,
         }
+
+    #is the same as
+
+    def page(request):
+
+        articles = Articles.objects.all()[:30]
+
+        if request.browser_info.get('ismobiledevice') and not request.session.get('force_desktop_version'):
+            return render_to_response('mobile_tempalte.html',
+                                                              {'articles':articles, },
+                                                              context_instance=RequestContext(request))
+        return render_to_response('desktop_tempalte.html',
+                                                              {'articles':articles, },
+                                                              context_instance=RequestContext(request))
+
 
 Two utility URLs exist which are used to force/unforce the desktop vesion of the site. This is due to users not always wanting to view the mobile version of the site.
 
