@@ -1,6 +1,6 @@
 # Django settings for test_site project.
 import os
-
+import re
 PROJECT_DIR = os.path.dirname(__file__)
 
 DEBUG = True
@@ -122,6 +122,10 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
+
+#SMART_AGENT_SETTINGS = {
+#    'AGENT_DATASET_LOCATION': 'agents_basic.pkl',
+#}
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

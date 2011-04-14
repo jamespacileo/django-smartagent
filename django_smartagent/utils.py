@@ -7,21 +7,25 @@ import os
 
 from django.conf import settings
 
+APP_DIRNAME = os.path.abspath(os.path.dirname(__file__))
+
 SMART_AGENT_SETTINGS = {
-    'AGENT_DATASET_LOCATION': 'agents.pk',
+    'AGENT_DATASET_LOCATION': os.path.join(APP_DIRNAME, 'agents_basic.pkl'),
 }
 
 if hasattr(settings, 'SMART_AGENT_SETTINGS'):
     SMART_AGENT_SETTINGS.update(settings.SMART_AGENT_SETTINGS)
 
-agents = []
+AGENT_DATASET_LOCATION = getattr(SMART_AGENT_SETTINGS, 'AGENT_DATASET_LOCATION', 'agents_basic.pkl')
 
-agents = pickle.load(open(SMART_AGENT_SETTINGS['AGENT_DATASET_LOCATION'], 'rb'))
+try:
+    agents = pickle.load(open(AGENT_DATASET_LOCATION, 'rb'))
+except IOError:
+    raise Warning("User-Agent dataset cannot be found! Make sure that AGENT_DATASET_LOCATION is set.")
+    agents = []
 
-#try:
-#    agents = pickle.load(open('useragent_detector/agents.pk', 'rb'))
-#except IOError:
-#    pythonize_browscap(write_to_file='agents.pk')
+def load_agents():
+    agents = pickle.load(open(SMART_AGENT_SETTINGS['AGENT_DATASET_LOCATION'], 'rb'))
 
 def get_user_agent_characteristics(agent):
     """
@@ -51,12 +55,27 @@ def detect_user_agent(user_agent_string):
             candidates.append(agent)
 
     start = time.time()
-    candidates.sort(key=lambda x: x['depth'])
+    candidates.sort(key=lambda x: len(x['name']))
 
     start = time.time()
     result = get_user_agent_characteristics(candidates[-1])
     return result
 
+def all_possible_matches(user_agent_string):
+    candidates = []
+    for agent in agents:
+        if agent['regex'].match(user_agent_string):
+            candidates.append(agent)
+            
+    candidates.sort(key=lambda x: len(x['name']))
+    return [(item['name'], item['depth']) for item in candidates]
+
 if __name__=="__main__":
     ua = "Mozilla/5.0 (iPad; U; CPU OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5"
-    print detect_user_agent(ua)
+    print detect_user_agent(ua)['ismobiledevice']
+
+    ua = "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.16 (KHTML, like Gecko) Chrome/10.0.648.204 Safari/534.16"
+    print detect_user_agent(ua)['browser']
+
+    ua = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:2.0) Gecko/20100101 Firefox/4.0"
+    print detect_user_agent(ua)['browser']

@@ -1,1 +1,1 @@
-include README.rst LICENCE
+include README README.rst LICENCE.rst django_smartagent/agents.pk
