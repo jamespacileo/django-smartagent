@@ -88,8 +88,9 @@ which is the equivalent of:
 
 Two utility URLs exist which are used to force/unforce the desktop vesion of the site. This is due to users not always wanting to view the mobile version of the site.
 
-**smartagent/force_desktop_version/** forces the desktop version for mobile sites
-**smartagent/unforce_desktop_version** unforces the desktop version, forcing mobile devices to view the mobile version
+- **smartagent/force_desktop_version/** forces the desktop version for mobile sites
+
+- **smartagent/unforce_desktop_version** unforces the desktop version, forcing mobile devices to view the mobile version
 
 ::
 
