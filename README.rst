@@ -17,7 +17,7 @@ Description
     Django 1.2+
 
 Installation
-------
+------------
 
 To install the app add ``django_smartagent`` to ``INSTALLED_APPS``
 
@@ -37,13 +37,48 @@ Add the middleware
         ...
         'django_smartagent.middleware.UserAgentDetectorMiddleware',
     )
-    
 
-Place ``agents.pk`` within the root of the project directory 
+**The middleware** is used to attach the browser characteristics to the request object, which will be accessible through **request.browser_info**
 
-or alternatively set the AGENT_DATASET_LOCATION setting to the desired path for the agent data file.
+User-Agent data file
+----------------------------
 
-Finally add 
+Django-SmartAgent comes pre-packaged with a data file containing browser info **agents_basic.pkl**. The datafile is built using various resources on the net and generated to be made compatible with the library.
+
+You can grab the latest datafile from github https://github.com/jamespacileo/django-smartagent/downloads.
+
+Once you grab the latest data file, place it under your project folder. To inform Django-SmartAgent of the file location you need to edit settings.py by adding:
+
+::
+
+    SMART_AGENT_SETTINGS = {
+        'AGENT_DATASET_LOCATION': '/path/to/agent_data_set.pkl',
+    }
+
+Utilities for mobile sites
+--------------------------
+
+As it is popular for sites to have a mobile version, there are a few utility methods within the project.
+
+A **render_to** decorator
+
+Based on django-annoying's render_to, renders a page using a desktop or mobile version of a site, depending if the user-agent is a mobile device or not.
+
+::
+
+    @render_to(tempalte='desktop_template.html', mobile_template='mobile_template.html')
+    def page(request):
+
+        articles = Articles.objects.all()[:30]
+
+        return {
+            'articles': articles,
+        }
+
+Two utility URLs exist which are used to force/unforce the desktop vesion of the site. This is due to users not always wanting to view the mobile version of the site.
+
+**smartagent/force_desktop_version/** forces the desktop version for mobile sites
+**smartagent/unforce_desktop_version** unforces the desktop version, forcing mobile devices to view the mobile version
 
 ::
 
@@ -52,7 +87,7 @@ Finally add
         (r'^smartagent/', include('django_smartagent.urls')))
 
 Settings
-------
+--------
 
 A settings variable can be added to your project settings.
 
@@ -65,9 +100,9 @@ The structure is the following:
     }
 
 Usage
-------
+-----
 
-django-smartagent adds the ``browser_data`` dictionary to the ``request`` object containing features associated with the user's browser.
+django-smartagent adds the ``browser_info`` dictionary to the ``request`` object containing features associated with the user's browser.
 
 +-----------------------+----------------------------------------------+
 +  Fields exposed within ``browser_data``                              +
