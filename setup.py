@@ -12,7 +12,6 @@ setup(
     url = 'http://github.com/jamespacileo/django-smartagent/',
     dependency_links = [],
     classifiers = [
-        'Development Status :: 0.1 - Alpha',
         'Environment :: Plugins',
         'Framework :: Django',
         'Intended Audience :: Developers',

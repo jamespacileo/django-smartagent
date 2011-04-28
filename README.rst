@@ -19,6 +19,16 @@ Description
 Installation
 ------------
 
+Install from PyPI
+
+::
+
+    pip install django-smartagent
+
+    #or
+
+    easy_install django-smartagent
+
 To install the app add ``smartagent`` to ``INSTALLED_APPS``
 
 ::
