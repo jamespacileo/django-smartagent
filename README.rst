@@ -19,13 +19,13 @@ Description
 Installation
 ------------
 
-To install the app add ``django_smartagent`` to ``INSTALLED_APPS``
+To install the app add ``smartagent`` to ``INSTALLED_APPS``
 
 ::
 
     INSTALLED_APPS = (
         ...
-        'django_smartagent',
+        'smartagent',
         ...
     )
 
@@ -35,7 +35,7 @@ Add the middleware
 
     MIDDLEWARE_CLASSES = (
         ...
-        'django_smartagent.middleware.UserAgentDetectorMiddleware',
+        'smartagent.middleware.UserAgentDetectorMiddleware',
     )
 
 **The middleware** is used to attach the browser characteristics to the request object, which will be accessible through **request.browser_info**
@@ -96,7 +96,7 @@ Two utility URLs exist which are used to force/unforce the desktop vesion of the
 
     urlpatterns = patterns('',
         ...
-        (r'^smartagent/', include('django_smartagent.urls')))
+        (r'^smartagent/', include('smartagent.urls')))
 
 Settings
 --------

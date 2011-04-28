@@ -20,11 +20,11 @@ setup(
         'Programming Language :: Python',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
-    packages = ['django_smartagent'],
+    packages = ['smartagent'],
     #packages = find_packages(exclude=['ez_setup', 'test_project']),
     include_package_data = True,
     zip_safe = False,
     package_data = {
-        'django_smartagent': ['django_smartagent/agents_basic.pkl',],
+        'smartagent': ['smartagent/agents_basic.pkl',],
       },
 )
