@@ -64,7 +64,7 @@ A **render_to** decorator (based on django-annoying's render_to) renders a page 
 
 ::
 
-    @render_to(tempalte='desktop_template.html', mobile_template='mobile_template.html')
+    @render_to(template='desktop_template.html', mobile_template='mobile_template.html')
     def page(request):
 
         articles = Articles.objects.all()[:30]
