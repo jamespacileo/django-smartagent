@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'django-smartagent',
-    version = '0.1.0',
+    version = '0.1.1',
     description = 'django-smartagent is the fastest and most complete user agent parser',
     long_description = open('README.rst').read(),
     keywords = 'django apps',
