@@ -11,7 +11,7 @@ Description
     0.1.0
 
 :Description:
-    django-smartagent is an attempt to provide Django developers with a lightning fast and complete browser detection utility.
+    django-smartagent is a lightning fast and complete browser, OS and device detection utility. It includes various mobile site targeted features.
 
 :Requirements:
     Django 1.2+
