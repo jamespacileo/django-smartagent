@@ -5,7 +5,7 @@ Description
 ------
 
 :Author:
-    James Pacileo
+    James Pacileo `@ignighted <http://twitter.com/ignighted>`_
 
 :Version:
     0.1.0
