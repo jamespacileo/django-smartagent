@@ -2,15 +2,16 @@ from functools import wraps
 
 from django.shortcuts import render_to_response
 from django.http import HttpResponse
+from django.template import RequestContext
 
 def render_to(template=None, mobile_template=None, mimetype=None):
     """
     Based upon django-annoying: https://bitbucket.org/offline/django-annoying/
 
-    Decorator for Django views that sends returned dict to render_to_response 
+    Decorator for Django views that sends returned dict to render_to_response
     function.
 
-    Template name can be decorator parameter or TEMPLATE item in returned 
+    Template name can be decorator parameter or TEMPLATE item in returned
     dictionary.  RequestContext always added as context instance.
     If view doesn't return dict then decorator simply returns output.
 
