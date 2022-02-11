@@ -22,7 +22,6 @@ try:
     agents = pickle.load(open(AGENT_DATASET_LOCATION, 'rb'))
 except TypeError:
     raise Warning("User-Agent dataset cannot be found! Make sure that AGENT_DATASET_LOCATION is set.")
-    agents = []
 
 def load_agents():
     agents = pickle.load(open(SMART_AGENT_SETTINGS['AGENT_DATASET_LOCATION'], 'rb'))
@@ -49,24 +48,21 @@ def detect_user_agent(user_agent_string):
     """
 
     start = time.time()
-    candidates = []
-    for agent in agents:
-        if agent['regex'].match(user_agent_string):
-            candidates.append(agent)
+    candidates = [
+        agent for agent in agents if agent['regex'].match(user_agent_string)
+    ]
 
     start = time.time()
     candidates.sort(key=lambda x: len(x['name']))
 
     start = time.time()
-    result = get_user_agent_characteristics(candidates[-1])
-    return result
+    return get_user_agent_characteristics(candidates[-1])
 
 def all_possible_matches(user_agent_string):
-    candidates = []
-    for agent in agents:
-        if agent['regex'].match(user_agent_string):
-            candidates.append(agent)
-            
+    candidates = [
+        agent for agent in agents if agent['regex'].match(user_agent_string)
+    ]
+
     candidates.sort(key=lambda x: len(x['name']))
     return [(item['name'], item['depth']) for item in candidates]
 
